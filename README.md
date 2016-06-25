@@ -9,10 +9,10 @@ LinkedList implementation
 6. Наличие тестовых примеров
 
 Требования к отчету:
-1. Шаблон - http://www.eltech.ru/ru/universitet/svedeniya-ob- obrazovatelnoy-organizacii/obrazovanie/normativnye-dokumenty3
-2. Наличие в отчете алгоритмических сложностей основных операций с обоснованием
+* Шаблон - http://www.eltech.ru/ru/universitet/svedeniya-ob-obrazovatelnoy-organizacii/obrazovanie/normativnye-dokumenty3
+* Наличие в отчете алгоритмических сложностей основных операций с обоснованием
 
 При сдаче ИДЗ:
-1. Вопросы про любую коллекцию из вариантов
-2. Вопросы по коду
-3. Вопросы про алгоритмическую сложность основных операций
+* Вопросы про любую коллекцию из вариантов
+* Вопросы по коду
+* Вопросы про алгоритмическую сложность основных операций
