@@ -1,26 +1,78 @@
-import java.util.Collection;
-import java.util.Iterator;
-import java.util.List;
-import java.util.ListIterator;
+import java.util.*;
 
 /**
  * @autor LeylaH
  */
 
 public class MyLinkedList<T> implements LinkedList<T> {
-    MyNode last = null;
-    MyNode<T> head;
-    int size = 0;
+
+    /**
+     * Pointer to first node.
+     */
+    MyNode<T> head = null;
+    MyNode<T> last = null;
+    private int size = 0;
+
+    /**
+     * Constructs an empty list.
+     */
+    public MyLinkedList() {
+    }
+
+    /**
+     * Constructs a list containing the elements of the specified
+     * collection, in the order they are returned by the collection's
+     * iterator.
+     *
+     * @param  c the collection whose elements are to be placed into this list
+     * @throws NullPointerException if the specified collection is null
+     */
+    public MyLinkedList(Collection<? extends T> c) {
+        this();
+        addAll(c);
+    }
 
 
     @Override
     public int size() {
-        return 0;
+        return size;
     }
 
     @Override
     public boolean isEmpty() {
-        return false;
+        if(head == null) {
+            return false;
+        }
+        return true;
+    }
+
+    /**
+     * Returns the first element in this list.
+     *
+     * @return the first element in this list
+     * @throws NoSuchElementException if this list is empty
+     */
+    public T getHead() {
+        final MyNode<T> h = head;
+        if (h == null) {
+            throw new NoSuchElementException();
+        }
+        return h.value;
+    }
+
+    /**
+     * Returns the last element in this list.
+     *
+     * @return the last element in this list
+     * @throws NoSuchElementException if this list is empty
+     */
+
+    public T getLast() {
+        final MyNode<T> l = last;
+        if (l == null) {
+            throw new NoSuchElementException();
+        }
+        return l.value;
     }
 
     @Override
@@ -85,7 +137,21 @@ public class MyLinkedList<T> implements LinkedList<T> {
 
     @Override
     public int indexOf(Object o) {
-        return 0;
+        int index = 0;
+        if (o == null) {
+            for (MyNode<T> node = head; node != null; node = node.next) {
+                if (node.value == null)
+                    return index;
+                index++;
+            }
+        } else {
+            for (MyNode<T> node = head; node != null; node = node.next) {
+                if (o.equals(node.value))
+                    return index;
+                index++;
+            }
+        }
+        return -1;
     }
 
     @Override
@@ -123,9 +189,28 @@ public class MyLinkedList<T> implements LinkedList<T> {
         return false;
     }
 
+    /**
+     * Returns an array containing all of the elements in this list
+     * in proper sequence (from first to last element).
+     *
+     * <p>The returned array will be "safe" in that no references to it are
+     * maintained by this list.  (In other words, this method must allocate
+     * a new array).  The caller is thus free to modify the returned array.
+     *
+     * <p>This method acts as bridge between array-based and collection-based
+     * APIs.
+     *
+     * @return an array containing all of the elements in this list
+     *         in proper sequence
+     */
     @Override
     public Object[] toArray(Object[] a) {
-        return new Object[0];
+        Object[] result = new Object[size];
+        int i = 0;
+        for (MyNode<T> node = head; node != null; node = node.next) {
+            result[i++] = node.value;
+        }
+        return result;
     }
 }
 

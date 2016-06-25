@@ -3,14 +3,10 @@
  */
 public class MyNode<T> {
     T value;
-    MyNode link;
+    MyNode next;
 
-    public MyNode(T v, MyNode<T> link) {
+    public MyNode(T v, MyNode<T> next) {
         this.value = v;
-        this.link = link;
-    }
-
-    public MyNode getNext() {
-        return link;
+        this.next = next;
     }
 }
