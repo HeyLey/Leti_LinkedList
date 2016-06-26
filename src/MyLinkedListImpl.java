@@ -372,5 +372,15 @@ public class MyLinkedListImpl<T> extends AbstractList<T> implements MyLinkedList
         return lastIndex;
     }
 
+    static private class MyNode<T> {
+        T value;
+        MyNode<T> next;
+
+        MyNode(T v, MyNode<T> next) {
+            this.value = v;
+            this.next = next;
+        }
+    }
+
 }
 
