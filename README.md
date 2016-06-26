@@ -1,5 +1,5 @@
 # Leti_LinkedList
-LinkedList implementation
+MyLinkedList implementation
 
 1. Наличие интерфейса (от которого наследуется реализация)
 2. Использование в тестах интерфейса
