@@ -148,6 +148,7 @@ public class MyLinkedListImpl<T> extends AbstractList<T> implements MyLinkedList
                     next = next.next;
                 }
                 current = null;
+                size--;
             }
         };
     }
