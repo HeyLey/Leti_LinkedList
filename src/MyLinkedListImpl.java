@@ -50,9 +50,9 @@ public class MyLinkedListImpl<T> extends AbstractList<T> implements MyLinkedList
     @Override
     public boolean isEmpty() {
         if(head == null) {
-            return false;
+            return true;
         }
-        return true;
+        return false;
     }
 
     /**
