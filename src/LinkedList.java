@@ -18,4 +18,6 @@ interface LinkedList<T> extends List<T> {
      * @throws NoSuchElementException if this list is empty
      */
     T getLast();
+
+
 }
